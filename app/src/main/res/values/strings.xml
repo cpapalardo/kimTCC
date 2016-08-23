@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Teste_Aplicacao</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_personal_styling">PersonalStyling</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_termos_de_uso">TermosDeUso</string>
+    <string name="title_activity_descricao_cor">DescricaoCor</string>
+    <string name="title_activity_menu_aplicacao">MenuAplicacao</string>
+</resources>
