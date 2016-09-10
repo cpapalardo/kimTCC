@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textViewAppName"
             android:layout_toRightOf="@id/imageViewLogo"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name"
+            android:visibility="invisible"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -37,18 +38,20 @@
             android:onClick="onButtonMenuClick"
             android:text="Menu"
             android:layout_centerHorizontal="true"
-            style="@style/botaoVerde"
+            style="@style/botaoMenu"
+            android:layout_margin="10dp"
             />
 
         <ImageButton
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:id="@+id/imageButtonReadTag"
-            android:src="@drawable/logo_shenlong"
+            android:src="@drawable/nfcicon"
             android:scaleType="fitCenter"
             android:background="@null"
             android:layout_centerInParent="true"
             android:layout_below="@id/buttonMenu"
+            android:layout_margin="15dp"
             android:contentDescription="Ler tag NFC"/>
         <TextView
             android:layout_width="wrap_content"
@@ -56,7 +59,8 @@
             android:id="@+id/textViewResult"
             android:layout_below="@id/imageButtonReadTag"
             android:layout_centerHorizontal="true"
-            android:text=""/>
+            android:text=""
+            android:layout_margin="10dp"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +68,7 @@
             android:scaleType="fitCenter"
             android:background="@null"
             android:layout_below="@id/textViewResult"
-            android:src="@drawable/microphone_black_shape"
+            android:src="@drawable/microphone_pink"
             android:layout_centerHorizontal="true" />
 
 

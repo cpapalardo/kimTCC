@@ -9,4 +9,38 @@
     <string name="title_activity_termos_de_uso">TermosDeUso</string>
     <string name="title_activity_descricao_cor">DescricaoCor</string>
     <string name="title_activity_menu_aplicacao">MenuAplicacao</string>
+
+    <string name="descricao_branco">A cor branca é um coringa e combina com tudo! Não tenha medo de usá-la.</string>
+    <string name="descricao_preto">A cor preta é um coringa e combina com tudo! Não tenha medo de usá-la. Além de tudo, ainda emagrece.</string>
+    <string name="descricao_rosa">Sem medo, você pode misturar o rosa com vermelho, alaranjado, amarelo, azul e, claro, com branco, preto e cinza.</string>
+    <string name="descricao_laranja">A cor laranja ainda não tem uma descrição. Espere por atualizações!</string>
+    <string name="descricao_vermelho">A cor vermelha ainda não tem uma descrição. Espere por atualizações!</string>
+    <string name="descricao_marrom">A cor marrom ainda não tem uma descrição. Espere por atualizações!</string>
+    <string name="descricao_roxo">Roxo é a cor mais legal do arco-íris.</string>
+    <string name="descricao_azul">A cor azul ainda não tem uma descrição. Espere por atualizações!</string>
+    <string name="descricao_verde">A cor verde ainda não tem uma descrição. Espere por atualizações!</string>
+    <string name="descricao_amarelo">A cor amarela ainda não tem uma descrição. Espere por atualizações!</string>
+
+    <string name="titulo_branco">Branco</string>
+    <string name="titulo_preto">Preto</string>
+    <string name="titulo_rosa">Rosa</string>
+    <string name="titulo_laranja">Laranja</string>
+    <string name="titulo_vermelho">Vermelho</string>
+    <string name="titulo_marrom">Marrom</string>
+    <string name="titulo_roxo">Roxo</string>
+    <string name="titulo_azul">Azul</string>
+    <string name="titulo_verde">Verde</string>
+    <string name="titulo_amarelo">Amarelo</string>
+
+    <string name="termos_de_uso"> Entre os tipos de Dados Pessoais que este Aplicativo recolhe, por si só ou por meio terceiros, estão: Cookie e Dados de Uso.
+
+Outros Dados Pessoais recolhidos podem ser descritos em outras seções desta política de privacidade ou pelo texto explicativo específico apresentado no contexto da coleta de Dados.
+Os Dados Pessoais podem ser livremente fornecidos pelo Usuário, ou coletados automaticamente quando se utiliza este Aplicativo.
+Qualquer uso de Cookies - ou de outras ferramentas de rastreamento - pelo este Aplicativo ou pelos proprietários dos serviços terceirizados utilizados por este Aplicativo, salvo indicação em contrário, servem para identificar os Usuários e lembrar as suas preferências, com o único propósito de fornecer os serviços requeridos pelos Usuários.
+O não fornecimento de determinados Dados Pessoais pode tornar impossível para este Aplicativo prestar os seus serviços.
+
+O Usuário assume a responsabilidade pelos Dados Pessoais de terceiros publicados ou compartilhados por meio deste serviço (este Aplicativo) e confirma que tem o consentimento da parte terceira para fornecer Dados para o Proprietário.</string>
+
+
+
 </resources>

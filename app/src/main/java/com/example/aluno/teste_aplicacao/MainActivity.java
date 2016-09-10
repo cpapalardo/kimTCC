@@ -1,6 +1,8 @@
 package com.example.aluno.teste_aplicacao;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
@@ -12,21 +14,39 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
+import android.os.Vibrator;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity implements NfcAdapter.ReaderCallback {
 
     private NfcAdapter nfcAdapter;
     public TextView textViewResult;
+    Vibrator vibrator;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textViewResult = (TextView) findViewById(R.id.textViewResult);
+        vibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+       // this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setTitle("");
     }
 
-    public void onButtonMenuClick(View view){
+    public void onButtonMenuClick(View view) {
         Intent intent = new Intent(this, MenuAplicacao.class);
         startActivity(intent);
     }
@@ -51,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
             byte[] payload = ndefRecord.getPayload();
 
 				/*
-				0 = n (tamanho do locale)
+                0 = n (tamanho do locale)
 				1
 				...
 				n = locale
@@ -67,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
                 System.out.println("Locale: " + locale);
                 System.out.println("Text: " + text);
                 textViewResult.setText(text);
+                vibrator.vibrate(500);
 
                 return true;
             }
@@ -75,18 +96,18 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
         return false;
     }
 
-
+/*
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    }*/
 
-    public void onButtonCoresClick(View view){
+    public void onButtonCoresClick(View view) {
         Intent intent = new Intent(this, MenuAplicacao.class);
         startActivity(intent);
     }
-
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -100,14 +121,14 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @Override
     protected void onResume() {
         super.onResume();
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(getApplication());
-        nfcAdapter.enableReaderMode(this,                 new NfcAdapter.ReaderCallback() {
+        nfcAdapter.enableReaderMode(this, new NfcAdapter.ReaderCallback() {
             @Override
             public void onTagDiscovered(final Tag tag) {
                 //Update the view since input was recieved.
@@ -120,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
             Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
             if (rawMsgs != null) {
                 for (int i = 0; i < rawMsgs.length; i++) {
-                    if (filterMessage((NdefMessage)rawMsgs[i])) {
+                    if (filterMessage((NdefMessage) rawMsgs[i])) {
                         break;
                     }
                 }
@@ -153,5 +174,45 @@ public class MainActivity extends AppCompatActivity implements NfcAdapter.Reader
             }
         }
         filterMessage(message);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.example.aluno.teste_aplicacao/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://com.example.aluno.teste_aplicacao/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
     }
 }

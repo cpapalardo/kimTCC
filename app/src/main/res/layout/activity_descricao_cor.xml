@@ -8,11 +8,11 @@
 
     <TextView android:text="títuloCor" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tituloCor"
+        android:id="@+id/textViewColorTitle"
         android:layout_centerHorizontal="true"/>
 
     <TextView android:text="Oi! Essa cor combina com a outra e com mais essa e birrrl 37 anos porra. Saí de casa comi pa caraio. Ajuda o moleque que tá doente. É 37 anos, porra." android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_below="@id/tituloCor"
-        android:id="@+id/textoCor"/>
+        android:layout_height="wrap_content" android:layout_below="@id/textViewColorTitle"
+        android:id="@+id/textViewColorText"/>
 
 </RelativeLayout>

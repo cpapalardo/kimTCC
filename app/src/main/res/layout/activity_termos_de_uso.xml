@@ -12,14 +12,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aqui é Body Builder Ipsum PORRA! Sabe o que é isso daí? Trapézio descendente é o nome disso aí. Que não vai dá rapaiz, não vai dá essa porra. Ó o homem ali porra!, é 13 porra! Vem porra! Eu quero esse 13 daqui a pouquinho aí. É verão o ano todo vem cumpadi.
-
-Sai filho da puta! Bora caralho, você quer ver essa porra velho. É esse que a gente quer, é ele que nóis vamo buscar. É 37 anos caralho! Birl! AHHHHHHHHHHHHHHHHHHHHHH..., porra!
-
-É 13 porra! Bora caralho, você quer ver essa porra velho. Negativa Bambam negativa. Boraaa, Hora do Show Porra. Não vai dá não. É verão o ano todo vem cumpadi.
-
-Negativa Bambam negativa. Sai filho da puta! Que não vai dá rapaiz, não vai dá essa porra. Vem porra! Birl! É 37 anos caralho!
-
-Negativa Bambam negativa. Sai filho da puta! Bora caralho, você quer ver essa porra velho. Ele tá olhando pra gente. Tá comigo porra. Vem porra!"/>
+        android:text="@string/termos_de_uso"/>
 
 </RelativeLayout>
